@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synapse - Modern E-Learning & Video Streaming Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #09090b; --surface: #121217; --border: #272733; --accent: #8b5cf6; --accent-glow: rgba(139, 92, 246, 0.15); --text: #f4f4f7; --muted: #9494a3; --success: #10b981; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; }
+    .header { padding: 1rem 2rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+    .container { max-width: 1250px; margin: 0 auto; padding: 2.5rem 2rem; }
+    .player-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; margin-top: 1.5rem; }
+    .video-viewport { background: #000; border-radius: 12px; height: 380px; border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; }
+    .lesson-item { padding: 0.75rem 1rem; border-radius: 8px; background: #191922; margin-bottom: 0.5rem; display: flex; justify-content: space-between; font-size: 0.85rem; cursor: pointer; }
+    .lesson-item.active { border-left: 3px solid var(--accent); background: var(--accent-glow); color: #fff; }
+    .btn { background: var(--accent); color: white; border: none; padding: 0.65rem 1.25rem; border-radius: 8px; font-weight: 700; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div style="display:flex; align-items:center; gap:0.5rem;">
+      <span style="font-size:1.5rem;">🎓</span>
+      <b style="font-size:1.25rem;">Synapse Learning Academy</b>
+    </div>
+    <div style="display:flex; gap:1rem; align-items:center;">
+      <span style="font-size:0.85rem; color:var(--muted);">Enrolled: Chanakya</span>
+      <a href="assessments.html" class="btn" style="text-decoration:none;">Quizzes & Certificates →</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end;">
+      <div>
+        <h1>CS-502: Distributed Cloud Architecture</h1>
+        <p style="color:var(--muted); margin-top:0.35rem;">Module 4: Consensus Protocols, Raft, and Vector Clocks</p>
+      </div>
+      <button class="btn" onclick="alert('Successfully enrolled in specialization track!')">✓ 1-Click Track Enrollment</button>
+    </div>
+
+    <div class="player-layout">
+      <div>
+        <div class="video-viewport">
+          <span style="font-size:4rem;">▶️</span>
+          <div style="position:absolute; bottom:1rem; left:1rem; right:1rem; display:flex; justify-content:space-between; align-items:center; background:rgba(0,0,0,0.7); padding:0.5rem 1rem; border-radius:8px;">
+            <span>1080p60 · 1.5x Speed · CC Enabled</span>
+            <span style="color:var(--success); font-weight:700;">18:42 / 45:00</span>
+          </div>
+        </div>
+        <div style="margin-top:1rem;">
+          <h3>Lecture Transcript & Notes</h3>
+          <p style="color:var(--muted); font-size:0.9rem; margin-top:0.5rem;">In distributed consensus, leader election guarantees state machine replication across untrusted network partitions.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Course Syllabus & Stream Index</h3>
+        <div style="margin-top:1rem;">
+          <div class="lesson-item active">
+            <span>1. Raft Consensus Fundamentals</span>
+            <span>Completed ✓</span>
+          </div>
+          <div class="lesson-item active">
+            <span>2. Byzantine Fault Tolerance</span>
+            <span>Now Playing 🔊</span>
+          </div>
+          <div class="lesson-item">
+            <span>3. Distributed Transactions & 2PC</span>
+            <span>35 mins</span>
+          </div>
+          <div class="lesson-item">
+            <span>4. CAP Theorem in Practice</span>
+            <span>50 mins</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
