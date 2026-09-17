@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synapse - Assignments, Quizzes & Verified Certificates</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #09090b; --surface: #121217; --border: #272733; --accent: #8b5cf6; --text: #f4f4f7; --muted: #9494a3; --success: #10b981; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; }
+    .header { padding: 1rem 2rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+    .container { max-width: 1050px; margin: 0 auto; padding: 2.5rem 2rem; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; }
+    .btn { background: var(--accent); color: white; border: none; padding: 0.65rem 1.25rem; border-radius: 8px; font-weight: 700; cursor: pointer; }
+    .cert-frame { border: 2px dashed #8b5cf6; background: #161224; border-radius: 12px; padding: 2rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <b>Synapse Assessment & Certification Hub</b>
+    <a href="index.html" style="color:var(--muted); text-decoration:none; font-size:0.85rem;">← Back to Course</a>
+  </header>
+
+  <main class="container">
+    <!-- Assignment Upload -->
+    <div class="card">
+      <h2>1. Assignment Submission Pipeline</h2>
+      <p style="color:var(--muted); font-size:0.85rem; margin-bottom:1rem;">Lab 4: Implement Raft Leader Election in Go / Python</p>
+      <div style="border: 2px dashed var(--border); border-radius: 8px; padding: 2rem; text-align: center; margin-bottom: 1rem;">
+        <span style="font-size:2rem;">📁</span>
+        <p style="margin-top:0.5rem; font-weight:600;">Drag and drop assignment repository ZIP or PDF</p>
+        <p style="color:var(--muted); font-size:0.75rem;">SHA-256 integrity hash will be generated upon upload</p>
+      </div>
+      <button class="btn" onclick="alert('Assignment submitted with timestamp verification: 2026-09-17 10:45:00 UTC')">Upload & Submit Assignment</button>
+    </div>
+
+    <!-- Interactive Module Quiz -->
+    <div class="card">
+      <h2>2. Module Mastery Quiz</h2>
+      <p style="margin: 1rem 0 0.5rem;">In Raft, what prevents split-brain elections across multiple candidates?</p>
+      <div style="background:#09090b; padding:0.85rem; border-radius:6px; border:1px solid var(--border); margin-bottom:0.5rem;">
+        <input type="radio" checked> Randomized election timeouts with majority quorum requirement
+      </div>
+      <span style="color:var(--success); font-weight:700; font-size:0.85rem;">✓ Correct! +25 Knowledge Points</span>
+    </div>
+
+    <!-- Verified Certificate -->
+    <div class="card">
+      <h2>3. Automated Course Completion Certificate</h2>
+      <div class="cert-frame">
+        <h3 style="font-size:1.75rem; letter-spacing:-0.02em; color:#fff;">CERTIFICATE OF EXCELLENCE</h3>
+        <p style="color:var(--muted); margin: 0.5rem 0 1rem;">This certifies that</p>
+        <h2 style="color:var(--accent); font-size:1.8rem;">CHANAKYA</h2>
+        <p style="color:var(--muted); margin-top:0.5rem;">has successfully mastered Distributed Cloud Architecture & Consensus Algorithms.</p>
+        <div style="margin-top:1.5rem; font-size:0.8rem; color:var(--muted);">
+          <b>Credential ID:</b> <code>SYN-2026-DIST-8491</code> · <b>Issued:</b> September 2026
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
